@@ -1,0 +1,62 @@
+
+Respecto a redes, 
+
+Escojer un tema y exponer acerca de el.
+
+	Servicios en la nube (AWS, Azure, etc.)
+	Computación Peer To Peer.
+
+Laboratorio
+	
+	Aprender a utilizar sockets UDP y TCP, con programa python y go
+	Analizar trafico utilizando Wireshark.
+	Entender estructura cliente servidor.
+	Entender protocolos utilizados en internet
+
+
+	Para implementar socket es posible que las aplicaicones se ejecuten en distintas o iguales maquinas.
+	La anterior comunicacion permite lo que se denomina cliente/servidor.
+
+	Python y Go, permiten el uso de sockets en sus aplicaciones para su comunicacion.
+	Python (socket) Go (net)
+
+
+
+Cliente 				
+		python
+	   	conectarse por medio de tcp/ip con servidor intermediario
+	   	no conectarse directamente a servidor de juego o nodo de juego
+	   	mostrar por consola los resultador y turnos, quien gano y si quiere seguir jugando
+
+
+Servidor Intermediario 	
+		python
+		conectarse por medio de tcp/ip con cliente
+		conectarse por medio de udp con servidor juego
+		responder a cliente con mensaje recibido por servidor conecta
+		Este servidor procesa o determina el turno, revisa ganadores y envia resultado y jugada a cliente.
+		envia mensaje al servidor indicando termino de juego.
+
+
+servidor Conecta 		
+		go
+		se crea coneccion via UD hacia cliente intermedario
+		se crea otra conexion para pedir jugada
+		se envian y reciben mensajes del servidor intermedario
+		informar intercambios de mensajes dentro de su consola.
+		mostrar log de apertura y cierre de puertos.
+
+
+analisis de trafico
+        
+        1. Si se analiza el n ́umero de los mensajes enviados dentro de la aplicaci ́on. ¿Cu ́antos son los
+		que logra detectar Wireshark?. Y comparando en base al c ́odigo, ¿Es la misma cantidad?,
+		si no lo es, ¿A qu ́e se deber ́ıa?
+		2. ¿Cu ́al es el protocolo que se debiese ver a la hora de revisar el intercambio de mensajes en
+		Wireshark? ¿Y cu ́ales encontr ́o?
+		3. ¿El contenido de los mensajes dentro de Wireshark son legibles?, ¿Por Qu ́e si? o ¿Por Qu ́e
+		no?
+
+
+
+
